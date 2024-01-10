@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ProgressView("Loading")
+        Spacer()
+        Button {
+            viewModel.signOut()
+        } label: {
+            HStack {
+                Text("Sign Out")
+                    .fontWeight(.semibold)
+            }
+            .foregroundColor(.white)
+            .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+        }
+        .background(Color(.systemBlue))
+        .cornerRadius(10)
+        .padding(.top, 24)
     }
 }
 
