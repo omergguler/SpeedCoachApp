@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC4F410A2B5CBA980002E289 /* TrainingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F41092B5CBA980002E289 /* TrainingDetailView.swift */; };
+		AC4F410C2B5CD02F0002E289 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F410B2B5CD02F0002E289 /* SplashScreen.swift */; };
+		ACD0BC002B4FC4BA0096EEDA /* TrainingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0BBFF2B4FC4BA0096EEDA /* TrainingListRow.swift */; };
+		ACD0BC022B4FC5400096EEDA /* TrainingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0BC012B4FC5400096EEDA /* TrainingListView.swift */; };
+		ACD0BC062B4FC6460096EEDA /* TrainingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0BC052B4FC6460096EEDA /* TrainingListViewModel.swift */; };
+		ACD0BC092B4FC6DF0096EEDA /* TrainingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0BC082B4FC6DF0096EEDA /* TrainingDataSource.swift */; };
+		ACD0BC0B2B4FC70E0096EEDA /* TrainingDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0BC0A2B4FC70E0096EEDA /* TrainingDataSourceDelegate.swift */; };
+		ACD0BC0E2B4FC7610096EEDA /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0BC0D2B4FC7610096EEDA /* Training.swift */; };
+		ACD0BC102B4FC76C0096EEDA /* TrainingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0BC0F2B4FC76C0096EEDA /* TrainingResponse.swift */; };
 		ACF7C8192B4DFFD60038CFAC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ACF7C8182B4DFFD60038CFAC /* FirebaseAnalytics */; };
 		ACF7C81B2B4DFFD60038CFAC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = ACF7C81A2B4DFFD60038CFAC /* FirebaseAnalyticsOnDeviceConversion */; };
 		ACF7C81D2B4DFFD60038CFAC /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ACF7C81C2B4DFFD60038CFAC /* FirebaseAnalyticsSwift */; };
@@ -53,6 +62,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC4F41092B5CBA980002E289 /* TrainingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailView.swift; sourceTree = "<group>"; };
+		AC4F410B2B5CD02F0002E289 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		ACD0BBFF2B4FC4BA0096EEDA /* TrainingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListRow.swift; sourceTree = "<group>"; };
+		ACD0BC012B4FC5400096EEDA /* TrainingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListView.swift; sourceTree = "<group>"; };
+		ACD0BC052B4FC6460096EEDA /* TrainingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListViewModel.swift; sourceTree = "<group>"; };
+		ACD0BC082B4FC6DF0096EEDA /* TrainingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataSource.swift; sourceTree = "<group>"; };
+		ACD0BC0A2B4FC70E0096EEDA /* TrainingDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDataSourceDelegate.swift; sourceTree = "<group>"; };
+		ACD0BC0D2B4FC7610096EEDA /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		ACD0BC0F2B4FC76C0096EEDA /* TrainingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingResponse.swift; sourceTree = "<group>"; };
 		ACFBB8382B4DC3DB0075C975 /* SpeedCoachApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedCoachApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFBB83B2B4DC3DB0075C975 /* SpeedCoachAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCoachAppApp.swift; sourceTree = "<group>"; };
 		ACFBB83D2B4DC3DB0075C975 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +128,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC4F41082B5CBA840002E289 /* TrainingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AC4F41092B5CBA980002E289 /* TrainingDetailView.swift */,
+			);
+			path = TrainingDetail;
+			sourceTree = "<group>";
+		};
+		ACD0BBFE2B4FC4A50096EEDA /* TrainingList */ = {
+			isa = PBXGroup;
+			children = (
+				ACD0BBFF2B4FC4BA0096EEDA /* TrainingListRow.swift */,
+				ACD0BC012B4FC5400096EEDA /* TrainingListView.swift */,
+				ACD0BC052B4FC6460096EEDA /* TrainingListViewModel.swift */,
+			);
+			path = TrainingList;
+			sourceTree = "<group>";
+		};
+		ACD0BC072B4FC6BD0096EEDA /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				ACD0BC082B4FC6DF0096EEDA /* TrainingDataSource.swift */,
+				ACD0BC0A2B4FC70E0096EEDA /* TrainingDataSourceDelegate.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		ACD0BC112B4FCE560096EEDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC4F41082B5CBA840002E289 /* TrainingDetail */,
+				ACFBB84D2B4DC5950075C975 /* Home */,
+				ACD0BBFE2B4FC4A50096EEDA /* TrainingList */,
+				AC4F410B2B5CD02F0002E289 /* SplashScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		ACFBB82F2B4DC3DB0075C975 = {
 			isa = PBXGroup;
 			children = (
@@ -129,12 +185,13 @@
 		ACFBB83A2B4DC3DB0075C975 /* SpeedCoachApp */ = {
 			isa = PBXGroup;
 			children = (
-				ACFBB8562B4DDC810075C975 /* Model */,
-				ACFBB84C2B4DC58B0075C975 /* Authentication */,
-				ACFBB84D2B4DC5950075C975 /* Home */,
-				ACFBB84B2B4DC5630075C975 /* Components */,
 				ACFBB83B2B4DC3DB0075C975 /* SpeedCoachAppApp.swift */,
 				ACFBB83D2B4DC3DB0075C975 /* ContentView.swift */,
+				ACD0BC112B4FCE560096EEDA /* Views */,
+				ACD0BC072B4FC6BD0096EEDA /* DataSource */,
+				ACFBB8562B4DDC810075C975 /* Models */,
+				ACFBB84C2B4DC58B0075C975 /* Authentication */,
+				ACFBB84B2B4DC5630075C975 /* Components */,
 				ACFBB83F2B4DC3DD0075C975 /* Assets.xcassets */,
 				ACFBB8592B4DE1010075C975 /* GoogleService-Info.plist */,
 				ACFBB8412B4DC3DD0075C975 /* Preview Content */,
@@ -176,12 +233,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		ACFBB8562B4DDC810075C975 /* Model */ = {
+		ACFBB8562B4DDC810075C975 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ACD0BC0D2B4FC7610096EEDA /* Training.swift */,
+				ACD0BC0F2B4FC76C0096EEDA /* TrainingResponse.swift */,
 				ACFBB8572B4DDC8E0075C975 /* User.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		ACFBB8662B4DE4090075C975 /* View */ = {
@@ -308,14 +367,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4F410C2B5CD02F0002E289 /* SplashScreen.swift in Sources */,
 				ACFBB83E2B4DC3DB0075C975 /* ContentView.swift in Sources */,
 				ACFBB8552B4DDBB10075C975 /* HomeView.swift in Sources */,
+				ACD0BC0B2B4FC70E0096EEDA /* TrainingDataSourceDelegate.swift in Sources */,
+				ACD0BC062B4FC6460096EEDA /* TrainingListViewModel.swift in Sources */,
+				ACD0BC0E2B4FC7610096EEDA /* Training.swift in Sources */,
+				ACD0BC092B4FC6DF0096EEDA /* TrainingDataSource.swift in Sources */,
+				AC4F410A2B5CBA980002E289 /* TrainingDetailView.swift in Sources */,
+				ACD0BC022B4FC5400096EEDA /* TrainingListView.swift in Sources */,
 				ACFBB84A2B4DC4A80075C975 /* ButtonDS.swift in Sources */,
 				ACFBB8512B4DC68E0075C975 /* InputView.swift in Sources */,
 				ACFBB8582B4DDC8E0075C975 /* User.swift in Sources */,
 				ACFBB8532B4DCCDA0075C975 /* RegisterView.swift in Sources */,
 				ACFBB84F2B4DC5BC0075C975 /* LoginView.swift in Sources */,
+				ACD0BC102B4FC76C0096EEDA /* TrainingResponse.swift in Sources */,
 				ACFBB83C2B4DC3DB0075C975 /* SpeedCoachAppApp.swift in Sources */,
+				ACD0BC002B4FC4BA0096EEDA /* TrainingListRow.swift in Sources */,
 				ACFBB8692B4DE4840075C975 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +523,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = row;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -483,6 +552,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = row;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

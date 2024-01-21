@@ -9,25 +9,26 @@ import Foundation
 
 class TrainingListViewModel: ObservableObject {
     @Published var isLoading = true
-    @Published var dogBreedList: [Dog] = []
-    @Published var infoPresented = false
-    private var dataSource = DogDataSource()
-    @Published var currentBreed = "String"
+    @Published var trainingList: [TrainingData] = []
+    private var dataSource = TrainingDataSource()
+
     init() {
         dataSource.delegate = self
     }
-    func loadDogBreedList() {
-        dataSource.loadDogBreedList()
-    }
-    func infoTapped(breedName: String) {
-        infoPresented = true
-        currentBreed = breedName
+
+    func loadTrainingList() {
+        dataSource.loadTrainingList()
     }
 }
 
-extension TrainingListViewModel: DogDataSourceDelegate {
-    func dogBreedListLoaded(dogBreedList: [Dog]) {
-        isLoading = false
-        self.dogBreedList = dogBreedList
+extension TrainingListViewModel: TrainingDataSourceDelegate {
+    func trainingListLoaded(trainingList: [TrainingData]) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.isLoading = false
+        }
+        self.trainingList = trainingList
+        
+        print(self.trainingList)
+        
     }
 }

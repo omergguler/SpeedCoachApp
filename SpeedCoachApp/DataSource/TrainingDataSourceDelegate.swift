@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol TrainingDataSourceDelegate: AnyObject {
+    func trainingListLoaded(trainingList: [TrainingData])
+}

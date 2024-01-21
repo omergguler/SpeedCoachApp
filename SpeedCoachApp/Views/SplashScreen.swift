@@ -9,7 +9,21 @@ import SwiftUI
 
 struct SplashScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+            ZStack{
+                Color.splash
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
+                    Text("Speed Coach App")
+                        .font(.title)
+                    
+                    Image("row")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 250, height: 100)
+                }
+            }
+        
     }
 }
 

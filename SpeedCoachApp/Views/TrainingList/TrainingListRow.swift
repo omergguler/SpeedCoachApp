@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TrainingListRow: View {
-//    private let training: Training
     private let id: Int
 
     init(id: Int) {

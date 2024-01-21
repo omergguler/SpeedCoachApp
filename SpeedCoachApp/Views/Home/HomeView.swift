@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var authViewModel: AuthViewModel
     var body: some View {
         TrainingListView()
         Spacer()
         Button {
-            viewModel.signOut()
+            authViewModel.signOut()
         } label: {
             HStack {
                 Text("Sign Out")

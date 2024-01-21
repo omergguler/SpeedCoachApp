@@ -16,8 +16,10 @@ struct RegisterView: View {
     
     
     var body: some View {
-        
+        Spacer()
         VStack(spacing: 24) {
+            Text("Sign Up")
+                .font(.title2)
             InputView(text: $email, title: "Email Adress", placeholder: "name@example.com")
                 .autocapitalization(.none)
             InputView(text: $password, title: "Password", placeholder: "Enter password", isSecureField: true)

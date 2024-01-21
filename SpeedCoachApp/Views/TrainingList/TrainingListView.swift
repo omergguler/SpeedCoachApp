@@ -8,30 +8,49 @@
 import SwiftUI
 
 struct TrainingListView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
     @StateObject private var viewModel = TrainingListViewModel()
     var body: some View {
-        VStack {
-            ForEach(1..<51) {
-                index in
-                TrainingListRow(id: index)
+        if viewModel.isLoading {
+            VStack {
+                ProgressView("Loading")
+                Image("row")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 250, height: 100)
+            }
+                .onAppear {
+                    viewModel.loadTrainingList()
+                }
+        } else {
+            NavigationView {
+                VStack {
+                    
+                    List(viewModel.trainingList, id: \.self) { training in
+                        NavigationLink(destination: TrainingDetailView(training: training)) {
+                            TrainingListRow(id: training.index)
+                        }
+                    }
+                    .navigationBarTitle("Training List")
+                    
+                    Spacer()
+                    
+                    Button {
+                        authViewModel.signOut()
+                    } label: {
+                        HStack {
+                            Text("Sign Out")
+                                .fontWeight(.semibold)
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+                    }
+                    .background(Color(.systemRed))
+                    .cornerRadius(10)
+                    .padding(.top, 24)
+                }
             }
         }
-//        if viewModel.isLoading {
-//            ProgressView("Loading")
-//                .onAppear {
-//                    viewModel.loadTrainingList()
-//                }
-//        } else {
-//            VStack {
-//                List(viewModel.trainingList, id: \.self) { training in
-//                    TrainingListRow(training: training)
-//                        .onTapGesture {
-//
-//                        }
-//                }
-//                .navigationBarTitle("Training List")
-//            }
-//        }
     }
 }
 

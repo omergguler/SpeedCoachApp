@@ -15,17 +15,21 @@ struct LoginView: View {
     @EnvironmentObject var viewModel: AuthViewModel
 
     var body: some View {
+        Text("Speed Coach App")
+            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            .padding(.vertical)
+        Spacer()
         NavigationStack{
-            
             // input fields
+            Spacer()
             VStack{
                 VStack(spacing: 24){
-                    
+                    Text("Sign In")
+                        .font(.title2)
                     InputView(text: $email, title: "Email Adress", placeholder: "name@example.com")
                         .autocapitalization(.none)
                     
                     InputView(text: $password, title: "Password", placeholder: "Enter your password", isSecureField: true)
-                    
                 }
                 .padding(.horizontal)
                 .padding(.top, 12)
