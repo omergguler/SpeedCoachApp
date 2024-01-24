@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct ButtonDS: View {
+    private let text: String
+
+    init(text: String) {
+        self.text = text
+    }
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing: .zero, content: {
+            Text("See in map \(self.text)")
+        })
     }
 }
 
 #Preview {
-    ButtonDS()
+    ButtonDS(text: "Test")
 }

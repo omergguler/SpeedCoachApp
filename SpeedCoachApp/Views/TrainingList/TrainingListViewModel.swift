@@ -23,7 +23,7 @@ class TrainingListViewModel: ObservableObject {
 
 extension TrainingListViewModel: TrainingDataSourceDelegate {
     func trainingListLoaded(trainingList: [TrainingData]) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.isLoading = false
         }
         self.trainingList = trainingList

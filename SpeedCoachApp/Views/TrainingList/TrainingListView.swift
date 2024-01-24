@@ -23,12 +23,12 @@ struct TrainingListView: View {
                     viewModel.loadTrainingList()
                 }
         } else {
-            NavigationView {
+            NavigationStack {
                 VStack {
                     
                     List(viewModel.trainingList, id: \.self) { training in
                         NavigationLink(destination: TrainingDetailView(training: training)) {
-                            TrainingListRow(id: training.index)
+                            TrainingListRow(id: training.index+1)
                         }
                     }
                     .navigationBarTitle("Training List")
